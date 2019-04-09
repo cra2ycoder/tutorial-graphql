@@ -2,13 +2,26 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveTimeout": 0,
 
-    "prettier.eslintIntegration": true,
+    "prettier.eslintIntegration": false,
     "prettier.tslintIntegration": true,
 
     "css.validate": false,
     "scss.validate": false,
 
+    "eslint.enable": false,
     "eslint.autoFixOnSave": false,
+
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll.tslint": true
+    },
 
     "files.exclude": {
         "**/.git": true,
@@ -17,9 +30,9 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/**.md": true,
-        "**/.prettierrc": true,
-        "**/.gitignore": true,
-        "**/node_modules": true
+        // "**/.prettierrc": true,
+        "**/.gitignore": true
+        // "**/node_modules": true
     },
 
     "search.exclude": {
