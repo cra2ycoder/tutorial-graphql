@@ -6,13 +6,18 @@
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "react-scripts": "2.1.8",
-        "typescript": "3.4.2"
+        "typescript": "3.4.2",
+        "graphql": "14.2.1",
+        "apollo-boost": "0.3.1",
+        "apollo-link-state": "0.4.2",
+        "react-apollo": "2.5.4"
     },
     "devDependencies": {
         "@types/jest": "24.0.11",
         "@types/node": "11.13.2",
         "@types/react": "16.8.13",
         "@types/react-dom": "16.8.3",
+        "@types/graphql": "14.2.0",
         "tslint": "5.15.0",
         "prettier": "1.16.4",
         "tslint-plugin-prettier": "2.0.1",
