@@ -10,20 +10,16 @@ repository with apollo-link-state, graphql, react-apollo and playground for grap
   - flattening out data that doesn't need to be nested
   - adding defaults when there is missing data (like default props)
   
-**3. query**
-   > READ
+**3. query** (READ)
 - ~ `GET` or `localStorage.get`
 - the properties from the typings that you wanna use
 - it's like using `omit`
 
-**4. mutation**
-   > WRITE
-
+**4. mutation** (WRITE)
 - ~ `POST` or `localStorage.set`
 - the exact same as a query, but it's used to change data, and it's like a function you call, and you pass in an object or whatever the params are
 
 **5. resolvers**
-
 - arguments(obj, args, context, info)
   - **obj**: `never use`,
   - **args**: `the query params, or mutation arguments`,
