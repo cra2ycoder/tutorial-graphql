@@ -24,10 +24,8 @@ repository with apollo-link-state, graphql, react-apollo and playground for grap
 
 **5. resolvers**
 
-- arguments:
-  (
-  <!-- obj: `never use`, -->
-  args: `the query params, or mutation arguments`,
-  context: `express req, it's unique for each query/mutation/request`,
-  <!-- info: `forgot what is even in here, never use` -->
-  )
+- arguments(obj, args, context, info)
+  - **obj**: `never use`,
+  - **args**: `the query params, or mutation arguments`,
+  - **context**: `express req, it's unique for each query/mutation/request`,
+  - **info**: `forgot what is even in here, never use`
