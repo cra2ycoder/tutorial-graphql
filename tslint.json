@@ -11,7 +11,8 @@
         "no-shadowed-variable": false,
         "interface-name": false,
         "member-access": [false],
-        "no-console": false
+        "no-console": false,
+        "import-spacing": true
     },
     "rulesDirectory": ["tslint-plugin-prettier"]
 }

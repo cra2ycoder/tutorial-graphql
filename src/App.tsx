@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import './App.css'
 import logo from './logo.svg'
+import Profile from './Profile'
 
 class App extends Component {
     public render() {
+        return <Profile />
         return (
             <div className='App'>
                 <header className='App-header'>
