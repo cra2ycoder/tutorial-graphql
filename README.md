@@ -1,6 +1,9 @@
 # graphql-tutorial
 repository with apollo-link-state, graphql, react-apollo and playground for graphql-anywhere
 
+**FYR:**
+https://codesandbox.io/s/2v5k40q4q0
+
 ## pieces
 
 **1. typings (schema)**
