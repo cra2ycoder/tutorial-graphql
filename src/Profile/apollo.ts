@@ -8,16 +8,16 @@ import { withClientState } from 'apollo-link-state'
  * @note
  * In future, this one will be received from APIs
  *
- * __typeName -> this is required to normalize the data in properly even cache
+ * __typename -> this is required to normalize the data in properly even cache
  */
 const fruitsData = {
-    fruits: [
-        {
-            __typeName: 'FruitType',
-            name: 'mango',
-            brand: 'malgova'
-        }
-    ]
+  fruits: [
+    {
+      __typename: 'FruitType',
+      name: 'mango',
+      brand: 'malgova'
+    }
+  ]
 }
 
 /**
@@ -38,14 +38,14 @@ const fruitsData = {
  */
 
 const FruitsTypes = gql`
-    type FruitItemType {
-        name: string!
-        brand: string!
-    }
+  type FruitItemType {
+    name: string!
+    brand: string!
+  }
 
-    type Query {
-        fruits: [FruitItemType]
-    }
+  type Query {
+    fruits: [FruitItemType]
+  }
 `
 
 /**
@@ -58,12 +58,12 @@ const FruitsTypes = gql`
  */
 
 const FruitsQuery = gql`
-    query {
-        fruits @client {
-            name
-            brand
-        }
+  query {
+    fruits @client {
+      name
+      brand
     }
+  }
 `
 
 /**
@@ -89,21 +89,21 @@ const cache = new InMemoryCache()
  *
  */
 const stateLink = withClientState({
-    cache,
-    defaults: { ...fruitsData },
-    typeDefs: FruitsTypes,
-    resolvers: {
-        Query: {
-            async fruits(obj: any, args: any, context: any, info: any) {
-                console.log('get fruits list')
-                const data = context.cache.read({
-                    query: FruitsQuery,
-                    optimistic: true
-                })
-                return { ...data!.fruits }
-            }
-        }
+  cache,
+  defaults: { ...fruitsData },
+  typeDefs: FruitsTypes,
+  resolvers: {
+    Query: {
+      async fruits(obj: any, args: any, context: any, info: any) {
+        console.log('get fruits list')
+        const data = context.cache.read({
+          query: FruitsQuery,
+          optimistic: true
+        })
+        return { ...data!.fruits }
+      }
     }
+  }
 })
 
 /**
@@ -113,8 +113,8 @@ const stateLink = withClientState({
  */
 
 const client = new ApolloClient({
-    cache,
-    link: ApolloLink.from([stateLink])
+  cache,
+  link: ApolloLink.from([stateLink])
 })
 
 export { fruitsData, FruitsQuery, FruitsTypes, stateLink, client, cache }
