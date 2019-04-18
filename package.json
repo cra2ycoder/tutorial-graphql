@@ -1,0 +1,42 @@
+{
+    "name": "graphql-tutorial",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-scripts": "2.1.8",
+        "typescript": "3.4.2",
+        "graphql": "14.2.1",
+        "apollo-boost": "0.3.1",
+        "apollo-link-state": "0.4.2",
+        "react-apollo": "2.5.4"
+    },
+    "devDependencies": {
+        "@types/jest": "24.0.11",
+        "@types/node": "11.13.2",
+        "@types/react": "16.8.13",
+        "@types/react-dom": "16.8.3",
+        "@types/graphql": "14.2.0",
+        "tslint": "5.15.0",
+        "prettier": "1.16.4",
+        "tslint-plugin-prettier": "2.0.1",
+        "tslint-config-prettier": "1.18.0",
+        "tslint-react": "4.0.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
+}
