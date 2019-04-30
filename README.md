@@ -1,7 +1,7 @@
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
 
-# graphql-tutorial
+# tutorial-graphql
 
 repository with apollo-link-state, graphql, react-apollo and playground for
 graphql-anywhere
